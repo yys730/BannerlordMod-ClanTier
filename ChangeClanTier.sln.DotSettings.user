@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Admin\.nuget\packages\bannerlord.referenceassemblies.core\1.2.0.21654-beta\ref\netstandard2.0\TaleWorlds.CampaignSystem.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Admin\.nuget\packages\bannerlord.lib.harmony\2.2.2\ref\netstandard2.0\0Harmony.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Admin\.nuget\packages\bannerlord.referenceassemblies.core\1.2.0.21654-beta\ref\netstandard2.0\TaleWorlds.Core.dll" /&gt;&#xD;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">C:\Program Files\dotnet\sdk\7.0.306\MSBuild.dll</s:String>
+	<s:Int64 x:Key="/Default/Environment/Hierarchy/Build/BuildTool/MsbuildVersion/@EntryValue">1114112</s:Int64>
+	
+	
+	</wpf:ResourceDictionary>

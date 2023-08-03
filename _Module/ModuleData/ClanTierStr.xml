@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<strings>
+	<string id="yys_clan_tier_0"
+			text="{=i18nID}士"/>
+	<string id="yys_clan_tier_1"
+			text="{=i18nID}下大夫"/>
+	<string id="yys_clan_tier_2"
+			text="{=i18nID}中大夫"/>
+	<string id="yys_clan_tier_3"
+			text="{=i18nID}上大夫"/>
+	<string id="yys_clan_tier_4"
+			text="{=i18nID}少卿"/>
+	<string id="yys_clan_tier_5"
+			text="{=i18nID}次卿"/>
+	<string id="yys_clan_tier_6"
+			text="{=i18nID}君主"/>
+</strings>
