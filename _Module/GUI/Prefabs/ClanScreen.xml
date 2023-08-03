@@ -492,13 +492,13 @@
 									WidthSizePolicy="CoverChildren" />
 
 								<!--声望标签-->
-								<ListPanel 
-								DataSource="{RenownHint}" HeightSizePolicy="CoverChildren"
-								HorizontalAlignment="Right" 
-								IsHidden="@isKindomLeader"
-								StackLayout.LayoutMethod="VerticalBottomToTop"
-								VerticalAlignment="Center"
-								WidthSizePolicy="CoverChildren">
+								<Widget
+									DataSource="{RenownHint}" HeightSizePolicy="CoverChildren"
+									HorizontalAlignment="Right" 
+									IsHidden="@isKindomLeader"
+									StackLayout.LayoutMethod="VerticalBottomToTop"
+									VerticalAlignment="Center"
+									WidthSizePolicy="CoverChildren">
 
 									<Children>
 										<ListPanel Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint"
@@ -524,7 +524,6 @@
 												<ListPanel DataSource="{..}" HeightSizePolicy="StretchToParent"
 													IsEnabled="false" IsHidden="@IsRenownProgressComplete"
 													MarginLeft="5" MarginTop="10"
-												   
 													WidthSizePolicy="CoverChildren">
 													<Children>
 
@@ -552,6 +551,7 @@
 																	InitialAmount="@CurrentRenown"
 																	MaxAmount="@NextTierRenown"
 																	SuggestedHeight="27"
+																			   
 																	SuggestedWidth="180"
 																	VerticalAlignment="Center"
 																	WidthSizePolicy="Fixed">
@@ -564,6 +564,7 @@
 																			MarginRight="14"
 																			SuggestedHeight="14"
 																			SuggestedWidth="190"
+																				
 																			VerticalAlignment="Center"
 																			WidthSizePolicy="Fixed">
 																			<Children>
@@ -611,7 +612,7 @@
 											</Children>
 										</ListPanel>
 									</Children>
-								</ListPanel>
+								</Widget>
 							</Children>
 						</Widget>
 

@@ -21,6 +21,14 @@ namespace ChangeClanTier
             }
         }
 
+        public bool hideProgressBar
+        {
+            get
+            {
+                return isKindomLeader || IsRenownProgressComplete;
+            }
+        }
+
         public string CurrentTierStr
         {
             get
