@@ -492,14 +492,13 @@
 									WidthSizePolicy="CoverChildren" />
 
 								<!--声望标签-->
-								<Widget
-									DataSource="{RenownHint}" HeightSizePolicy="CoverChildren"
-									HorizontalAlignment="Right" 
-									IsHidden="@isKindomLeader"
-									StackLayout.LayoutMethod="VerticalBottomToTop"
-									VerticalAlignment="Center"
-									WidthSizePolicy="CoverChildren">
-
+								<Widget Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint"
+										HeightSizePolicy="CoverChildren"
+										HorizontalAlignment="Right"
+										IsHidden="@isKindomLeader"
+										StackLayout.LayoutMethod="VerticalBottomToTop"
+										VerticalAlignment="Center"
+										WidthSizePolicy="CoverChildren">
 									<Children>
 										<ListPanel Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint"
 											DataSource="{RenownHint}" HeightSizePolicy="CoverChildren"
@@ -517,7 +516,6 @@
 													HeightSizePolicy="CoverChildren" HorizontalAlignment="Center"
 													PositionYOffset="25" Text="@CurrentRenownText"
 													WidthSizePolicy="CoverChildren" />
-
 
 
 												<!-- 家族等级横向layout-->
@@ -607,7 +605,6 @@
 															VerticalAlignment="Center" WidthSizePolicy="CoverChildren" />
 													</Children>
 												</ListPanel>
-
 
 											</Children>
 										</ListPanel>

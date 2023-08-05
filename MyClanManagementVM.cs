@@ -2,55 +2,32 @@
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.ViewModelCollection.ClanManagement;
 using TaleWorlds.Core;
+using TaleWorlds.Library;
 
 namespace ChangeClanTier
 {
     public class MyClanManagementVM : ClanManagementVM
     {
+
+        public string CurrentTierStr { get; init; }
+        public string NextTierStr { get; init; }
+        public string KindomLeaderStr { get; init; }
+        //是否君主
+        [DataSourceProperty]
+        public bool isKindomLeader { get; init; }
+
         public MyClanManagementVM(Action onClose, Action<Hero> showHeroOnMap, Action<Hero> openPartyAsManage, Action openBannerEditor) : base(onClose, showHeroOnMap, openPartyAsManage, openBannerEditor)
         {
-            Console.WriteLine("yys MyClanManagementVM used");
+
+            CurrentTierStr = GameTexts.FindText($"yys_clan_tier_{CurrentTier}", null).ToString(); 
+            NextTierStr = GameTexts.FindText($"yys_clan_tier_{NextTier}", null).ToString();
+            KindomLeaderStr = GameTexts.FindText($"yys_clan_tier_6", null).ToString();
+            isKindomLeader = Hero.MainHero.IsKingdomLeader;
+
+            GameTexts.SetVariable("TIER", CurrentTierStr);
+            CurrentRenownText = GameTexts.FindText("str_clan_tier", null).ToString();
         }
 
-        //是否君主
-        public bool isKindomLeader
-        {
-            get
-            {
-                return !Hero.MainHero.IsKingdomLeader;
-            }
-        }
 
-        public bool hideProgressBar
-        {
-            get
-            {
-                return isKindomLeader || IsRenownProgressComplete;
-            }
-        }
-
-        public string CurrentTierStr
-        {
-            get
-            {
-                return GameTexts.FindText($"yys_clan_tier_{CurrentTier}", null).ToString();
-            }
-
-        }
-        public string NextTierStr
-        {
-            get
-            {
-                return GameTexts.FindText($"yys_clan_tier_{NextTier}", null).ToString();
-            }
-        }
-        public string KindomLeaderStr
-        {
-            get
-            {
-                return GameTexts.FindText($"yys_clan_tier_6", null).ToString();
-            }
-
-        }
     }
 }

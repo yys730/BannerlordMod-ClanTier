@@ -52,14 +52,15 @@ public class ClanTierPatch
     /**
      * 改变家族页面右上角进度条上面的 " 家族名称:" 后面的字段
      */
-    [HarmonyPostfix, HarmonyPatch(typeof(ClanManagementVM), nameof(ClanManagementVM.RefreshValues))]
-    public static void ClanManagementVM_RefreshValues_Postfix(MyClanManagementVM __instance)
-    {
-        GameTexts.SetVariable("TIER", __instance.CurrentTierStr);
-        __instance.CurrentRenownText = GameTexts.FindText("str_clan_tier", null).ToString();
-        ElementNotificationVM tutorialNotification = __instance.TutorialNotification;
+    //[HarmonyPostfix, HarmonyPatch(typeof(ClanManagementVM), nameof(ClanManagementVM.RefreshValues))]
+    //public static void ClanManagementVM_RefreshValues_Postfix(MyClanManagementVM __instance)
+    //{
+    //    GameTexts.SetVariable("TIER", __instance.CurrentTierStr);
+    //    Console.WriteLine("__instance.CurrentTierStr : "+__instance.CurrentTierStr);
+    //    __instance.CurrentRenownText = GameTexts.FindText("str_clan_tier", null).ToString();
+    //    ElementNotificationVM tutorialNotification = __instance.TutorialNotification;
 
-    }
+    //}
 
     /**
      * 替换ClanManagementVM到GauntletClanScreen里进行初始化
