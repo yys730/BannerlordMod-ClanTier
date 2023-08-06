@@ -9,6 +9,8 @@ using System;
 using TaleWorlds.CampaignSystem.ViewModelCollection;
 using System.Collections.Generic;
 using System.Reflection.Emit;
+using SandBox.CampaignBehaviors;
+using TaleWorlds.Localization;
 
 namespace ChangeClanTier;
 
@@ -27,6 +29,10 @@ public class ClanTierPatch
     private static readonly ConstructorInfo _clanManagementVMCtor = typeof(ClanManagementVM).GetConstructor(_vmCtorParamTypes);
     private static readonly ConstructorInfo _myClanManagementVMCtor = typeof(MyClanManagementVM).GetConstructor(_vmCtorParamTypes);
 
+    /**
+     * 在GauntletClanScreen 中的 TaleWorlds.Core.IGameStateListener.OnActivate 方法里
+     * 替换ClanManagementVM的实例 为 MyClanManagementVM
+     */
     [HarmonyPatch(typeof(GauntletClanScreen), "TaleWorlds.Core.IGameStateListener.OnActivate")]
     static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
     {
@@ -36,7 +42,6 @@ public class ClanTierPatch
             var operand = instruction.operand;
             if (opcode == OpCodes.Newobj && (operand as ConstructorInfo) == _clanManagementVMCtor)
             {
-                Console.WriteLine("111");
                 yield return new CodeInstruction(OpCodes.Newobj, _myClanManagementVMCtor);
             }
             else
@@ -46,6 +51,23 @@ public class ClanTierPatch
 
 
         }
+    }
+
+
+    /**
+     * 家族升级弹出的通知
+     */
+    [HarmonyPrefix, HarmonyPatch(typeof(DefaultNotificationsCampaignBehavior), "OnClanTierIncreased")]
+    public static bool Prefix(Clan clan, bool shouldNotify = true)
+    {
+        if (shouldNotify && clan == Clan.PlayerClan)
+        {
+            MBTextManager.SetTextVariable("CLAN", clan.Name, false);
+            MBTextManager.SetTextVariable("TIER_LEVEL", GameTexts.FindText($"yys_clan_tier_{clan.Tier}", null).ToString());
+            MBInformationManager.AddQuickInformation(new TextObject("{=No04urXt}{CLAN} tier is increased to {TIER_LEVEL}", null), 0, null, "");
+        }
+        return false;
+
     }
 
 
@@ -91,22 +113,5 @@ public class ClanTierPatch
     //}
 
 
-    /*
-     * 家族升级弹出的通知
-     */
-    //[HarmonyPrefix, HarmonyPatch(typeof(DefaultNotificationsCampaignBehavior), "OnClanTierIncreased")]
-    //public static bool Prefix(Clan clan, bool shouldNotify = true)
-    //{
-    //    Console.WriteLine("1111");
-    //    if (shouldNotify && clan == Clan.PlayerClan)
-    //    {
-    //        MBTextManager.SetTextVariable("CLAN", clan.Name, false);
-    //        MBTextManager.SetTextVariable("TIER_LEVEL", clan.Tier);
-    //        MBInformationManager.AddQuickInformation(
-    //            new TextObject("1111111111111", null), 0, null, "");
-    //    }
-    //    return false;
-
-    //}
 
 }

@@ -502,7 +502,7 @@
 									<Children>
 										<ListPanel Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint"
 											DataSource="{RenownHint}" HeightSizePolicy="CoverChildren"
-											HorizontalAlignment="Right" MarginRight="20" MarginTop="50"
+											HorizontalAlignment="Right" MarginRight="30" MarginTop="50"
 											StackLayout.LayoutMethod="VerticalBottomToTop"
 											VerticalAlignment="Center"
 											WidthSizePolicy="CoverChildren">

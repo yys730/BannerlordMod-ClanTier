@@ -13,5 +13,7 @@
 	<string id="yys_clan_tier_5"
 			text="{=i18nID}次卿"/>
 	<string id="yys_clan_tier_6"
-			text="{=i18nID}君主"/>
+			text="{=i18nID}上卿"/>
+	<string id="yys_clan_tier_7"
+		text="{=i18nID}君主"/>
 </strings>
