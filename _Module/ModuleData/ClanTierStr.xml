@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <strings>
-	<string id="yys_clan_tier_0"
-			text="{=i18nID}士"/>
-	<string id="yys_clan_tier_1"
-			text="{=i18nID}下大夫"/>
-	<string id="yys_clan_tier_2"
-			text="{=i18nID}中大夫"/>
-	<string id="yys_clan_tier_3"
-			text="{=i18nID}上大夫"/>
-	<string id="yys_clan_tier_4"
-			text="{=i18nID}少卿"/>
-	<string id="yys_clan_tier_5"
-			text="{=i18nID}次卿"/>
-	<string id="yys_clan_tier_6"
-			text="{=i18nID}上卿"/>
-	<string id="yys_clan_tier_7"
-		text="{=i18nID}君主"/>
+	<string id="xczg_clan_tier_0"
+			text="{=xczg_clan_tier_shi}shi"/>
+	<string id="xczg_clan_tier_1"
+			text="{=xczg_clan_tier_xdf}xdf"/>
+	<string id="xczg_clan_tier_2"
+			text="{=xczg_clan_tier_zdf}zdf"/>
+	<string id="xczg_clan_tier_3"
+			text="{=xczg_clan_tier_sdf}sdf"/>
+	<string id="xczg_clan_tier_4"
+			text="{=xczg_clan_tier_sq}sq"/>
+	<string id="xczg_clan_tier_5"
+			text="{=xczg_clan_tier_cq}cq"/>
+	<string id="xczg_clan_tier_6"
+			text="{=xczg_clan_tier_sq}sq"/>
+	<string id="xczg_clan_tier_7"
+			text="{=xczg_clan_tier_king}king"/>
 </strings>

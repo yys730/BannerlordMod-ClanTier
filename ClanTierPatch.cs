@@ -63,7 +63,7 @@ public class ClanTierPatch
         if (shouldNotify && clan == Clan.PlayerClan)
         {
             MBTextManager.SetTextVariable("CLAN", clan.Name, false);
-            MBTextManager.SetTextVariable("TIER_LEVEL", GameTexts.FindText($"yys_clan_tier_{clan.Tier}", null).ToString());
+            MBTextManager.SetTextVariable("TIER_LEVEL", GameTexts.FindText($"xczg_clan_tier_{clan.Tier}", null).ToString());
             MBInformationManager.AddQuickInformation(new TextObject("{=No04urXt}{CLAN} tier is increased to {TIER_LEVEL}", null), 0, null, "");
         }
         return false;

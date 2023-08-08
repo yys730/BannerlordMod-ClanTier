@@ -19,9 +19,9 @@ namespace ChangeClanTier
         public MyClanManagementVM(Action onClose, Action<Hero> showHeroOnMap, Action<Hero> openPartyAsManage, Action openBannerEditor) : base(onClose, showHeroOnMap, openPartyAsManage, openBannerEditor)
         {
 
-            CurrentTierStr = GameTexts.FindText($"yys_clan_tier_{CurrentTier}", null).ToString(); 
-            NextTierStr = GameTexts.FindText($"yys_clan_tier_{NextTier}", null).ToString();
-            KindomLeaderStr = GameTexts.FindText($"yys_clan_tier_7", null).ToString();
+            CurrentTierStr = GameTexts.FindText($"xczg_clan_tier_{CurrentTier}", null).ToString(); 
+            NextTierStr = GameTexts.FindText($"xczg_clan_tier_{NextTier}", null).ToString();
+            KindomLeaderStr = GameTexts.FindText($"xczg_clan_tier_7", null).ToString();
             isKindomLeader = Hero.MainHero.IsKingdomLeader;
 
             GameTexts.SetVariable("TIER", CurrentTierStr);
