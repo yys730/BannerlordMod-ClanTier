@@ -486,7 +486,7 @@
 									HorizontalAlignment="Right"
 									MarginRight="100"
 									DoNotAcceptEvents="true"
-									IsVisible="@isKindomLeader"
+									IsVisible="@IsKindomLeader"
 									HeightSizePolicy="CoverChildren"
 									Text="@KindomLeaderStr" VerticalAlignment="Center"
 									WidthSizePolicy="CoverChildren" />
@@ -495,7 +495,7 @@
 								<Widget Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint"
 										HeightSizePolicy="CoverChildren"
 										HorizontalAlignment="Right"
-										IsHidden="@isKindomLeader"
+										IsHidden="@IsKindomLeader"
 										StackLayout.LayoutMethod="VerticalBottomToTop"
 										VerticalAlignment="Center"
 										WidthSizePolicy="CoverChildren">

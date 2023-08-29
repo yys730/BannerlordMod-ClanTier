@@ -14,7 +14,7 @@ namespace ChangeClanTier
         public string KindomLeaderStr { get; init; }
         //是否君主
         [DataSourceProperty]
-        public bool isKindomLeader { get; init; }
+        public bool IsKindomLeader { get; init; }
 
         public MyClanManagementVM(Action onClose, Action<Hero> showHeroOnMap, Action<Hero> openPartyAsManage, Action openBannerEditor) : base(onClose, showHeroOnMap, openPartyAsManage, openBannerEditor)
         {
@@ -22,7 +22,7 @@ namespace ChangeClanTier
             CurrentTierStr = GameTexts.FindText($"xczg_clan_tier_{CurrentTier}", null).ToString(); 
             NextTierStr = GameTexts.FindText($"xczg_clan_tier_{NextTier}", null).ToString();
             KindomLeaderStr = GameTexts.FindText($"xczg_clan_tier_7", null).ToString();
-            isKindomLeader = Hero.MainHero.IsKingdomLeader;
+            IsKindomLeader = Hero.MainHero.IsKingdomLeader;
 
             GameTexts.SetVariable("TIER", CurrentTierStr);
             CurrentRenownText = GameTexts.FindText("str_clan_tier", null).ToString();
